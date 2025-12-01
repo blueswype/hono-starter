@@ -5,6 +5,8 @@ const app = new Hono()
 
 app.get('/', (c) => {
   console.log("Request Incoming");
+  const currentTime = now.toLocaleTimeString();
+  console.log(currentTime);
   return c.text('Hello Hono!')
 })
 
